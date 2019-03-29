@@ -1,5 +1,4 @@
 const weather = require('./weather');
-const getTime = require('./gettime');
 
 const locArr = [
    {loc:'San Francisco, CA', zip:'90001'},
