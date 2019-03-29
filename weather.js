@@ -9,13 +9,16 @@ module.exports = weather = {
                 return;
             }
             try {
-                result.forEach(element => {
+                for (let element of result){
+
+                //result.forEach(element => {
                     if(element.location.name == loc){
                         var ct = getTime.getCurTimeByTimeZone(element.location.timezone);
                         console.log(element.location.name+"\tTemperature: "+element.current.temperature+"oC\tCurrent Time: "+ct);
-                        return;
+                        break;
                     }
-                });
+                }
+                //});
             } catch (error) {
                 console.log(error);
             }
